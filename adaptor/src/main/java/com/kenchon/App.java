@@ -1,13 +1,23 @@
 package com.kenchon;
 
+import java.io.IOException;
+
 /**
  * Hello world!
  *
  */
 public class App 
 {
-    public static void main( String[] args )
+    public static void main(String[] args )
     {
-        System.out.println( "Hello World!" );
+        FileIO f = new FileProperties();
+        try {
+            f.readFromFile("/home/kenchon/source/designpattern/adaptor/file.txt");
+            f.setValue("width", "1024");
+            f.writeToFile("newfile.txt");
+            System.out.println("newfile.txt is created");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
