@@ -14,7 +14,7 @@ public class App
         try {
             f.readFromFile("/home/kenchon/source/designpattern/adaptor/file.txt");
             f.setValue("width", "1024");
-            f.writeToFile("newfile.txt");
+            f.writeToFile("/home/kenchon/source/designpattern/adaptor/newfile.txt");
             System.out.println("newfile.txt is created");
         } catch (IOException e) {
             e.printStackTrace();
